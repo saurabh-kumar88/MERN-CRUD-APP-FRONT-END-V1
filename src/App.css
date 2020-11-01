@@ -1,3 +1,15 @@
+body{
+  background-image: url("https://github.com/saurabh-kumar88/Images_for_django_app/blob/master/wallpaper.jpg?raw=true");
+  background-color: #cccccc;
+}
+
+.main-heading{
+  /* background-color: lightblue; */
+  text-align: center;
+  font : 50px Arial, sans-serif;
+  font-stretch: expanded;
+}
+
 .App{
   display : flex;
   justify-content : center;

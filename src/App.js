@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import TodoList from './components/TodoList';
+import './App.css';
+import Heading from './components/Heading';
 
 class App extends Component {
    
@@ -8,13 +10,11 @@ class App extends Component {
     return(
       <div className="App">
           <div className="Child">
-            <h1>MERN Stack - CRUD App-V1</h1>
+            <Heading />
             <TodoList />
           </div>
-      </div>  
+      </div>    
     )
-
-    
     
   }
 }

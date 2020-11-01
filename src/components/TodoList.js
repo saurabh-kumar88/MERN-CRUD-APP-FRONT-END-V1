@@ -16,7 +16,7 @@ class TodoList extends Component {
         this.inputRef = React.createRef();
         this.addItem =  this.addItem.bind(this);
         this.updateItem = this.updateItem.bind(this);
-        
+        this.isDuplicated = this.isDuplicated.bind(this);
 
     }
 
@@ -33,9 +33,30 @@ class TodoList extends Component {
       
     }
 
+    isDuplicated = (compareItem) => {
+      var isDuplicate = false;
+      this.state.Items.forEach((item) => {
+        if(item.title === compareItem){
+          isDuplicate = true;
+        } 
+      })
+      return isDuplicate;
+    }
+
     addItem = (event) => {
       event.preventDefault();
       
+      // avoid empty input submission
+      if(this.state.newItem === "" ){
+        alert("Empty input not allowed!");
+        return;
+      }
+      
+      // avoid duplicacy
+      if(this.isDuplicated(this.state.newItem)){
+        alert("Item already exist!");
+        return;
+      } else{
       // network call
       trackPromise(
         fetch("https://mern-todo-app-v1.herokuapp.com/api/todo/add", {
@@ -80,8 +101,8 @@ class TodoList extends Component {
         }
       )
     );
-         
-    }
+  }
+}
 
     removeItem = (index) => {
       const {Items} = this.state 
@@ -116,6 +137,11 @@ class TodoList extends Component {
 
       updateItem = (data) => {
         
+        // avoid duplicacy
+        if(this.isDuplicated(data.title)){
+           alert("Item already exist!");
+           return; 
+        }else{
         // server request
         trackPromise(
           fetch(`https://mern-todo-app-v1.herokuapp.com/api/todo/update/${data.todo_Id}`, {
@@ -148,8 +174,8 @@ class TodoList extends Component {
             }
           ) 
         );
-        
-      }
+      }  
+    }
 
     componentDidMount(){
       this.inputRef.current.focus()
