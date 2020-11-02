@@ -51,7 +51,6 @@ class ModalEdit extends Component {
           "todo_Id" :   this.props.Index,
           "title"   :   this.state.Item,    
         };
-        console.log(data)
         this.props.handleSubmit(data);
         this.handleClose();
     }

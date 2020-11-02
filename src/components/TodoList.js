@@ -59,7 +59,7 @@ class TodoList extends Component {
       } else{
       // network call
       trackPromise(
-        fetch("https://mern-todo-app-v1.herokuapp.com/api/todo/add", {
+        fetch("https://mern-crud-app-back-end-v1.herokuapp.com/api/todo/add", {
         method : 'POST',
         headers : {
           'Content-Type' : 'Application/json'
@@ -71,7 +71,7 @@ class TodoList extends Component {
         (result) => {
           
           trackPromise(
-            fetch("https://mern-todo-app-v1.herokuapp.com/api/todo/latest", {
+            fetch("https://mern-crud-app-back-end-v1.herokuapp.com/api/todo/latest", {
               method  : 'GET',
               headers : {
                 'Content-Type' : 'Application/json'
@@ -110,7 +110,7 @@ class TodoList extends Component {
       // server call
 
       trackPromise(
-        fetch(`https://mern-todo-app-v1.herokuapp.com/api/todo/delete/${index}`, {
+        fetch(`https://mern-crud-app-back-end-v1.herokuapp.com/api/todo/delete/${index}`, {
           method : 'DELETE',
         })
         .then(res => res.json())
@@ -144,7 +144,7 @@ class TodoList extends Component {
         }else{
         // server request
         trackPromise(
-          fetch(`https://mern-todo-app-v1.herokuapp.com/api/todo/update/${data.todo_Id}`, {
+          fetch(`https://mern-crud-app-back-end-v1.herokuapp.com/api/todo/update/${data.todo_Id}`, {
             method : 'PATCH',
             headers : {
               'Content-Type' : 'Application/json'
