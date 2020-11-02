@@ -45,8 +45,8 @@ class ModalDelete extends Component {
         const { show } = this.state;
         return (
             <>
-      <button variant="primary" onClick={this.handleShow}>
-        Delete 
+      <button className="btn btn-danger" onClick={this.handleShow}>
+        <i className="fa fa-trash"></i> 
       </button>
       <Modal show={show} onHide={this.handleClose} centered>
         <Modal.Header closeButton>

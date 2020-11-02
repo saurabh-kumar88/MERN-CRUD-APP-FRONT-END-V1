@@ -3,11 +3,95 @@ body{
   background-color: #cccccc;
 }
 
+h1,h2,h3,p {
+  text-align: center;
+}
+
+.Table{
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+
+}
+
+.Table td, Table th{
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+/* .Table tr:nth-child(even){background-color: #f2f2f2;} */
+
+.Table tr:hover {background-color: #ddd;}
+
+.Table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+
+.item-title{
+  float: left;
+}
+
+.modal-btn{
+  overflow: hidden;
+  padding-right: 0.5em;
+  
+
+}
+
+.itemStyle{
+  /* background-color: whitesmoke; */
+  width : 400px;
+  color : black;  
+}
+
+
+.form-input{
+  float: left;
+  width: 300px;
+  height: 35px;
+  border: black;
+  margin-bottom: 10px;
+}
+
+.form-btn{
+  overflow: hidden;
+  padding-right: .5em;
+  
+  background-color: lightgreen; /* Green */
+  border: none;
+  color: black;
+  padding-bottom  : 4px;
+
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 5px;
+  margin-top: 4px;
+  margin-bottom: 5px; 
+  transition-duration: 0.4s;
+  cursor: pointer;
+
+}
+
+.form-btn:hover{
+  background-color: #4CAF50;
+  color: white;
+}
+
 .main-heading{
   /* background-color: lightblue; */
   text-align: center;
   font : 50px Arial, sans-serif;
   font-stretch: expanded;
+  color : black;
+  margin-top: 10px;
 }
 
 .App{

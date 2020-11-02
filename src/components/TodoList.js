@@ -199,16 +199,24 @@ class TodoList extends Component {
   render() {
     const {Items , newItem } = this.state
     return (
-      <div className="todoListMain">
-        <div className="header">
-          <form onSubmit={this.addItem}>
-            <input name="Items" placeholder="enter task" 
-            value={newItem} 
-            onChange={this.handleInputChange}
-            ref={this.inputRef} />
-            <button type="submit">add</button>
+      <div className="w3-container">
+        <div className="w3-card-4">
+          <div className="w3-container ">
+            <h3>Add New Items</h3>
+          </div>
+          <br />
+          <form onSubmit={this.addItem} className="w3-container">
+          <input name="Items"
+                className="form-input"
+                placeholder="Type here...." 
+                value={newItem} 
+                onChange={this.handleInputChange}
+                ref={this.inputRef} />
+            
+            <button className="form-btn" type="submit">Submit</button>
           </form>
-        </div>
+          </div>
+        <br />
         <TodoItems entries={Items} 
           removeItem={this.removeItem}
           updateItem={this.updateItem}/>      

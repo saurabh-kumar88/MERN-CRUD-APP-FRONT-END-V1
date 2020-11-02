@@ -16,7 +16,7 @@ class ModalEdit extends Component {
         this.handleClose = this.handleClose.bind(this);
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        
+
 
     }
 
@@ -40,6 +40,13 @@ class ModalEdit extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
+        
+        //avoid empty input sumbission
+        if(this.state.Item === "" ){
+          alert("Empty input not allowed!");
+          return;
+        }
+
         const data = {
           "todo_Id" :   this.props.Index,
           "title"   :   this.state.Item,    
@@ -54,8 +61,8 @@ class ModalEdit extends Component {
         const { show } = this.state;
         return (
             <>
-      <button variant="primary" onClick={this.handleShow}>
-        Update 
+      <button className="btn btn-primary" onClick={this.handleShow}>
+          <i className="fa fa-edit"></i>
       </button>
       <Modal show={show} onHide={this.handleClose} centered>
         <Modal.Header closeButton>
@@ -63,6 +70,7 @@ class ModalEdit extends Component {
         </Modal.Header>
         <Modal.Body>
           <form onSubmit={this.handleSubmit}>
+            <p>Edit : {this.props.Item} </p>
             <label>
             Item:
               <input type="text" name="Item" onChange={this.handleInputChange}/>

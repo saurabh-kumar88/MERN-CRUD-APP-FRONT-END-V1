@@ -12,21 +12,57 @@ class TodoItems extends Component {
   }
 
   render() {
-    return (
-      <div>
-        <ul>
-          {this.props.entries.map((item) => (
-            <li key={item.todo_Id}>{item.title}
-            <ModalEdit handleSubmit={this.handleSubmit}
-              Index={item.todo_Id}/>
-            <ModalDelete Index={item.todo_Id} 
-            Item={item.title}
-            handleItemDelete={this.handleItemDelete}/>
-            </li>
-          ))}
-        </ul>
-      </div>
+    
+    return(
+      <table className="Table">
+          <tbody>
+              {this.props.entries.map((item) => {
+                return(<tr key={item.todo_Id}>
+                  <td>{item.title}</td>
+                  <td>  
+                    <ModalEdit handleSubmit={this.handleSubmit}
+                    Index={item.todo_Id}
+                    Item={item.title} />
+                  </td>
+                  <td>
+                    <ModalDelete Index={item.todo_Id} 
+                    Item={item.title}
+                    handleItemDelete={this.handleItemDelete}/>
+                  </td>
+                </tr>)
+              })}
+          </tbody>
+      </table>
     );
+    
+    // return (
+    //   <div>
+    //     <ul className="w3-ul w3-hoverable">
+    //       {this.props.entries.map((item) => (
+    //         <li key={item.todo_Id}>
+    //           <div className="itemStyle">
+                
+    //             <div className="item-title">
+    //               {item.title}
+    //             </div>
+
+    //             <div className="modal-btn">
+    //               <ModalEdit handleSubmit={this.handleSubmit}
+    //               Index={item.todo_Id}
+    //               Item={item.title} />
+    //             </div>
+
+    //             <div className="modal-btn">
+    //               <ModalDelete Index={item.todo_Id} 
+    //               Item={item.title}
+    //               handleItemDelete={this.handleItemDelete}/>
+    //             </div>
+    //           </div>
+    //         </li>
+    //       ))}
+    //     </ul>
+    //   </div>
+    // );
   }
 };
  
