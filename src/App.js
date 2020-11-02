@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import TodoList from './components/TodoList';
 import './App.css';
 import Heading from './components/Heading';
+import Footer from './components/Footer';
+
 
 class App extends Component {
    
@@ -12,6 +14,7 @@ class App extends Component {
           <div className="Child">
             <Heading />
             <TodoList />
+            <Footer />
           </div>
       </div>    
     )

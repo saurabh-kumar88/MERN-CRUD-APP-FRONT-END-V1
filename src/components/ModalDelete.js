@@ -53,14 +53,14 @@ class ModalDelete extends Component {
           <Modal.Title>Confirm delete</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <h1>Are you sure, you want to delete this item?</h1>
-          <p>{this.props.Item}</p> 
+          <h3>Are you sure, you want to delete</h3>
+          <h2> "{this.props.Item}" ?</h2> 
         </Modal.Body>
         <Modal.Footer>
-          <button variant="secondary" onClick={this.handleClose}>
+          <button className="btn btn-secondary" onClick={this.handleClose}>
             Cancel
           </button>
-          <button variant="primary" onClick={this.handleSubmit}>
+          <button className="btn btn-danger" onClick={this.handleSubmit}>
             Yes, Delete
           </button>
         </Modal.Footer>

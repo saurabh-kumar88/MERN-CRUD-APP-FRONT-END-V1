@@ -16,9 +16,10 @@ class TodoItems extends Component {
     return(
       <table className="Table">
           <tbody>
-              {this.props.entries.map((item) => {
+            <div className="scrollit">
+            {this.props.entries.map((item) => {
                 return(<tr key={item.todo_Id}>
-                  <td>{item.title}</td>
+                  <td id="todo-title">{item.title}</td>
                   <td>  
                     <ModalEdit handleSubmit={this.handleSubmit}
                     Index={item.todo_Id}
@@ -31,7 +32,10 @@ class TodoItems extends Component {
                   </td>
                 </tr>)
               })}
+            </div>
+              
           </tbody>
+          
       </table>
     );
     

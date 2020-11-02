@@ -70,18 +70,18 @@ class ModalEdit extends Component {
         </Modal.Header>
         <Modal.Body>
           <form onSubmit={this.handleSubmit}>
-            <p>Edit : {this.props.Item} </p>
-            <label>
-            Item:
-              <input type="text" name="Item" onChange={this.handleInputChange}/>
-            </label>
+            <h3>Edit "{this.props.Item}" ?</h3>
+            <input type="text" className="form-control" 
+            placeholder="Type here...." 
+            name="Item" 
+            onChange={this.handleInputChange}/>
           </form> 
         </Modal.Body>
         <Modal.Footer>
-          <button variant="secondary" onClick={this.handleClose}>
-            Close
+          <button className="btn btn-secondary" onClick={this.handleClose}>
+            Cancel
           </button>
-          <button variant="primary" onClick={this.handleSubmit}>
+          <button className="btn btn-primary" onClick={this.handleSubmit}>
             Save Changes
           </button>
         </Modal.Footer>

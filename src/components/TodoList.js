@@ -219,7 +219,7 @@ class TodoList extends Component {
         <br />
         <TodoItems entries={Items} 
           removeItem={this.removeItem}
-          updateItem={this.updateItem}/>      
+          updateItem={this.updateItem}/>
       </div>
     );
     
