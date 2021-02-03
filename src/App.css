@@ -1,12 +1,14 @@
-body{
+body {
   background-image: url("https://github.com/saurabh-kumar88/Images_for_django_app/blob/master/wallpaper.jpg?raw=true");
   background-color: #cccccc;
 }
 
-h1,h2,h3,p {
+h1,
+h2,
+h3,
+p {
   text-align: center;
 }
-
 
 footer {
   text-align: center;
@@ -19,28 +21,26 @@ footer {
   font-size: 1.5em;
 }
 
-
 /* scraoll-bar */
-.scrollit{
+.scrollit {
   overflow: scroll;
-  width:auto;
+  width: auto;
   height: 300px;
-  
 }
 
-.Table{
+.Table {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
-
 }
 
-.Table td, Table th{
+.Table td,
+Table th {
   border: 1px solid #ddd;
   padding: 8px;
 }
 
-.Table #todo-title{
+.Table #todo-title {
   width: 400px;
   font-size: larger;
   text-justify: auto;
@@ -49,37 +49,34 @@ footer {
 
 /* .Table tr:nth-child(even){background-color: #f2f2f2;} */
 
-.Table tr:hover {background-color: #ddd;}
+.Table tr:hover {
+  background-color: #ddd;
+}
 
 .Table th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
 }
 
-
-
-.item-title{
+.item-title {
   float: left;
 }
 
-.modal-btn{
+.modal-btn {
   overflow: hidden;
   padding-right: 0.5em;
-  
-
 }
 
-.itemStyle{
+.itemStyle {
   /* background-color: whitesmoke; */
-  width : 400px;
-  color : black;  
+  width: 400px;
+  color: black;
 }
 
-
-.form-input{
+.form-input {
   float: center;
   width: 300px;
   height: 35px;
@@ -88,14 +85,14 @@ footer {
   margin-left: 70px;
 }
 
-.form-btn{
+.form-btn {
   overflow: hidden;
-  padding-right: .5em;
-  
+  padding-right: 0.5em;
+
   background-color: lightgreen; /* Green */
   border: none;
   color: black;
-  padding-bottom  : 4px;
+  padding-bottom: 4px;
 
   text-align: center;
   text-decoration: none;
@@ -103,34 +100,31 @@ footer {
   font-size: 16px;
   margin-left: 5px;
   margin-top: 4px;
-  margin-bottom: 5px; 
+  margin-bottom: 5px;
   transition-duration: 0.4s;
   cursor: pointer;
-
 }
 
-.form-btn:hover{
-  background-color: #4CAF50;
+.form-btn:hover {
+  background-color: #4caf50;
   color: white;
 }
 
-.main-heading{
+.main-heading {
   /* background-color: lightblue; */
   text-align: center;
-  font : 50px Arial, sans-serif;
+  font: 50px Arial, sans-serif;
   font-stretch: expanded;
-  color : black;
+  color: black;
   margin-top: 10px;
 }
 
-.App{
-  display : flex;
-  justify-content : center;
-  
-
+.App {
+  display: flex;
+  justify-content: center;
 }
 
-.Child{
+.Child {
   /* uncomment to center both ways horizontally and vertically*/
   /* width: 50px;
   height: 50px;
@@ -172,5 +166,22 @@ footer {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+div.main-heading {
+  background-color: none;
+  padding: 20px;
+}
+
+@media screen and (min-width: 601px) {
+  div.main-heading {
+    font-size: 80px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  div.main-heading {
+    font-size: 30px;
   }
 }
